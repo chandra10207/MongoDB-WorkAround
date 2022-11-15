@@ -1,0 +1,14 @@
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/MongoWebAPI.deps.json
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/MongoWebAPI.runtimeconfig.json
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/appsettings.Development.json
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/appsettings.json
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/MongoWebAPI
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/MongoWebAPI.dll
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/Swashbuckle.AspNetCore.Swagger.dll
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/Microsoft.OpenApi.dll
+/Users/chandra.pandey/dotnet/MongoWebAPI/bin/Debug/MongoWebAPI.pdb
+/Users/chandra.pandey/dotnet/MongoWebAPI/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
+/Users/chandra.pandey/dotnet/MongoWebAPI/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+/Users/chandra.pandey/dotnet/MongoWebAPI/obj/Debug/docker-compose.dcproj.CopyComplete

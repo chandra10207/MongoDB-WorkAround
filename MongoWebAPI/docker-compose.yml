@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mongowebapi:
+    image: ${DOCKER_REGISTRY-}mongowebapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
