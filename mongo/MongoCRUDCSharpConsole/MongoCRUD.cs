@@ -8,16 +8,24 @@ namespace MongoCRUDCSharpConsole
 {
 	public class MongoCRUD
 	{
+        private IMongoClient _mongoClient;
         private readonly IMongoCollection<Account> _accountCollection;
         private readonly IMongoCollection<Restaurant> _restaurantsCollection;
+        private readonly IMongoCollection<Transfer> _transferCollection;
 
         public MongoCRUD(IMongoClient client)
 		{
-            var sampleAnalyticsDatabase = client.GetDatabase("sample_analytics");
+            _mongoClient = client;
+            var sampleAnalyticsDatabase = _mongoClient.GetDatabase("sample_analytics");
+
+
             _accountCollection = sampleAnalyticsDatabase.GetCollection<Account>("accounts");
+            _transferCollection = sampleAnalyticsDatabase.GetCollection<Transfer>("transfers");
             
-            var sampleRestaurantsDatabase = client.GetDatabase("sample_restaurants");
+            var sampleRestaurantsDatabase = _mongoClient.GetDatabase("sample_restaurants");
             _restaurantsCollection = sampleRestaurantsDatabase.GetCollection<Restaurant>("restaurants");
+
+
         }
 
         public void Querying()
@@ -138,6 +146,94 @@ namespace MongoCRUDCSharpConsole
             var accounts = _accountCollection
                 .DeleteMany(a => a.AccountId < 198100);
         }
+
+
+        //DB ACID Principle - Atomicity, Consistency, Isolation, Durability
+        /*
+         * C# Transaction steps
+         * MongoDB auto cancel any transaction after 60sec
+         * 
+         
+         */
+        public void Transaction()
+        {
+
+            //var fromID = 557378;
+            //var toID = 674364;
+            //var transferAmount = 20;
+
+            //var fromAccount = _accountCollection.Find(a => a.AccountId == fromID).FirstOrDefault();
+            //var toAccount = _accountCollection.Find(a => a.AccountId == toID).FirstOrDefault();
+
+            //var toAccountBalance = toAccount.Balance + transferAmount;
+            using (var session = _mongoClient.StartSession())
+            {
+
+                // Define the sequence of operations to perform inside the transactions
+                session.WithTransaction(
+                    (s, ct) =>
+                    {
+                        var fromId = 557378;
+                        var toId = 674364;
+
+                        // Create the transfer_id and amount being transfered
+                        var transferId = "TR02081994";
+                        var transferAmount = 20;
+
+                        // Obtain the account that the money will be coming from
+                        var fromAccountResult = _accountCollection.Find(e => e.AccountId == fromId).FirstOrDefault();
+                        // Get the balance and id of the account that the money will be coming from
+                        var fromAccountBalance = fromAccountResult.Balance - transferAmount;
+                        var fromAccountId = fromAccountResult.AccountId;
+
+                        Console.WriteLine(fromAccountBalance.GetType());
+
+                        // Obtain the account that the money will be going to
+                        var toAccountResult = _accountCollection.Find(e => e.AccountId == toId).FirstOrDefault();
+                        // Get the balance and id of the account that the money will be going to
+                        var toAccountBalance = toAccountResult.Balance + transferAmount;
+                        var toAccountId = toAccountResult.AccountId;
+
+                        // Create the transfer record
+                        var transferDocument = new Transfer
+                        {
+                            TransferId = transferId,
+                            ToAccount = toAccountId,
+                            FromAccount = fromAccountId,
+                            Amount = transferAmount
+                        };
+
+                        // Update the balance and transfer array for each account
+                        var fromAccountUpdateBalance = Builders<Account>.Update.Set("balance", fromAccountBalance);
+                        var fromAccountFilter = Builders<Account>.Filter.Eq("account_id", fromId);
+                        _accountCollection.UpdateOne(fromAccountFilter, fromAccountUpdateBalance);
+
+                        var fromAccountUpdateTransfers = Builders<Account>.Update.Push("transfers_complete", transferId);
+                        _accountCollection.UpdateOne(fromAccountFilter, fromAccountUpdateTransfers);
+
+                        var toAccountUpdateBalance = Builders<Account>.Update.Set("balance", toAccountBalance);
+                        var toAccountFilter = Builders<Account>.Filter.Eq("account_id", toId);
+                        _accountCollection.UpdateOne(toAccountFilter, toAccountUpdateBalance);
+                        var toAccountUpdateTransfers = Builders<Account>.Update.Push("transfers_complete", transferId);
+
+                        // Insert transfer doc
+                        _transferCollection.InsertOne(transferDocument);
+                        Console.WriteLine("Transaction complete!");
+                        return "Inserted into collections in different databases";
+                    });
+            }
+
+
+
+
+
+
+
+
+        }
+
+
+
 
 
 

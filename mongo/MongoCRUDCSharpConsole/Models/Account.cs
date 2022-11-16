@@ -18,8 +18,8 @@ namespace MongoCRUDCSharpConsole.Models
 		[BsonElement("limit")]
 		public int Limit { get; set; }
 
-		//[BsonElement("products")]
-		//public IEnumerable<string> Products {get;set;}
+		[BsonElement("balance")]
+		public int Balance {get;set;}
 		
 	}
 }

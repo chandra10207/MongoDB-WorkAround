@@ -21,7 +21,8 @@ namespace MongoCRUDCSharpConsole
             //mc.Querying();
             //mc.Update();
             //mc.UpdateMany();
-            mc.DeleteOne();
+            //mc.DeleteOne();
+            mc.Transaction();
 
             //LINQTest lt = new LINQTest();
 
