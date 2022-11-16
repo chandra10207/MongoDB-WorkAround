@@ -20,7 +20,8 @@ namespace MongoCRUDCSharpConsole
             MongoCRUD mc = new MongoCRUD(client);
             //mc.Querying();
             //mc.Update();
-            mc.UpdateMany();
+            //mc.UpdateMany();
+            mc.DeleteOne();
 
             //LINQTest lt = new LINQTest();
 

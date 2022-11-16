@@ -98,7 +98,57 @@ namespace MongoCRUDCSharpConsole
 
             Console.WriteLine($"Matched: {result.MatchedCount}; Modified: {result.ModifiedCount}");
 
+
+   //             Bson Approach
+
+   //             var filter = Builders<BsonDocument>
+   //.Filter
+   //.Lt("balance", 500);
+
+   //         var update = Builders<BsonDocument>
+   //            .Update
+   //            .Inc("balance", 10);
+
+   //         var result = await accountsCollection
+   //            .UpdateManyAsync(filter, update);
+
+   //         Console.WriteLine(result.ModifiedCount);
+
+
         }
+
+
+        /*
+         * DeleteResult Object
+         * IsAcknowledge - Was the delete successful? Boolean
+         * DeletedCount - How many documents deleted
+         * */
+        public void DeleteOne()
+        {
+            //LINQ Expression
+            var accounts = _accountCollection
+                .DeleteOne(a => a.AccountId == 198100);
+
+            Console.WriteLine("Deleted Count : " + accounts.DeletedCount);
+
+        }
+
+        public void DeleteMany()
+        {
+            var accounts = _accountCollection
+                .DeleteMany(a => a.AccountId < 198100);
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

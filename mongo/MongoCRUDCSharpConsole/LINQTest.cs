@@ -29,6 +29,22 @@ namespace MongoCRUDCSharpConsole
 
 
 
+            // Data source
+            List<string> my_list = new List<string>() {
+                "This is my Dog",
+                "Name of my Dog is Robin",
+                "This is my Cat",
+                "Name of the cat is Mewmew"
+        };
+
+            // Creating LINQ Query
+            // Using Method syntax
+            var res = my_list.Where(a => a.Contains("Dog"));
+
+
+
+
+
 
         }
 
