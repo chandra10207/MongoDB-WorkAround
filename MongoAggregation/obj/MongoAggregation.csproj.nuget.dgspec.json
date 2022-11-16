@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chandra.pandey/dotnet/MongoAggregation/MongoAggregation.csproj": {}
+    "/Users/chandra.pandey/dotnet/mongo/MongoAggregation/MongoAggregation.csproj": {}
   },
   "projects": {
-    "/Users/chandra.pandey/dotnet/MongoAggregation/MongoAggregation.csproj": {
+    "/Users/chandra.pandey/dotnet/mongo/MongoAggregation/MongoAggregation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chandra.pandey/dotnet/MongoAggregation/MongoAggregation.csproj",
+        "projectUniqueName": "/Users/chandra.pandey/dotnet/mongo/MongoAggregation/MongoAggregation.csproj",
         "projectName": "MongoAggregation",
-        "projectPath": "/Users/chandra.pandey/dotnet/MongoAggregation/MongoAggregation.csproj",
+        "projectPath": "/Users/chandra.pandey/dotnet/mongo/MongoAggregation/MongoAggregation.csproj",
         "packagesPath": "/Users/chandra.pandey/.nuget/packages/",
-        "outputPath": "/Users/chandra.pandey/dotnet/MongoAggregation/obj/",
+        "outputPath": "/Users/chandra.pandey/dotnet/mongo/MongoAggregation/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

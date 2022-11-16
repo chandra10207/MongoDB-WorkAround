@@ -22,7 +22,17 @@ namespace MongoCRUDCSharpConsole
             //mc.Update();
             //mc.UpdateMany();
             //mc.DeleteOne();
-            mc.Transaction();
+            //mc.Transaction();
+
+            AggregationPipeline ap = new AggregationPipeline(client);
+            //ap.Match();
+            //ap.Group();
+            //ap.SortLINQ();
+            //ap.SortBson();
+            ap.Projection();
+
+
+
 
             //LINQTest lt = new LINQTest();
 

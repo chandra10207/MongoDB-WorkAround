@@ -675,11 +675,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/chandra.pandey/dotnet/MongoDBLINQConsole/MongoDBLINQConsole.csproj",
+      "projectUniqueName": "/Users/chandra.pandey/dotnet/mongo/MongoDBLINQConsole/MongoDBLINQConsole.csproj",
       "projectName": "MongoDBLINQConsole",
-      "projectPath": "/Users/chandra.pandey/dotnet/MongoDBLINQConsole/MongoDBLINQConsole.csproj",
+      "projectPath": "/Users/chandra.pandey/dotnet/mongo/MongoDBLINQConsole/MongoDBLINQConsole.csproj",
       "packagesPath": "/Users/chandra.pandey/.nuget/packages/",
-      "outputPath": "/Users/chandra.pandey/dotnet/MongoDBLINQConsole/obj/",
+      "outputPath": "/Users/chandra.pandey/dotnet/mongo/MongoDBLINQConsole/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

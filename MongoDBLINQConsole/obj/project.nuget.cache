@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CopRVIokHJqGDwEfW8wzvME7pGSr9FnHO5OLfj2lQHibblgNX/sgzeRRu+LuimgCq860wRkZXUToUtj2e426cw==",
+  "dgSpecHash": "W8SZX3/yTjxxwG8KCKXVBC8lSn51K4J4wdlCmMOqVGiNSUVNq3O6z9GpUhzyRKj5RCcki64d7AoDDjXUfVFp9g==",
   "success": true,
-  "projectFilePath": "/Users/chandra.pandey/dotnet/MongoDBLINQConsole/MongoDBLINQConsole.csproj",
+  "projectFilePath": "/Users/chandra.pandey/dotnet/mongo/MongoDBLINQConsole/MongoDBLINQConsole.csproj",
   "expectedPackageFiles": [
     "/Users/chandra.pandey/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
     "/Users/chandra.pandey/.nuget/packages/microsoft.extensions.logging.abstractions/2.0.0/microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

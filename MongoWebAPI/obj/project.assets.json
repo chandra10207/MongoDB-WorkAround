@@ -888,11 +888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/chandra.pandey/dotnet/MongoWebAPI/MongoWebAPI.csproj",
+      "projectUniqueName": "/Users/chandra.pandey/dotnet/mongo/MongoWebAPI/MongoWebAPI.csproj",
       "projectName": "MongoWebAPI",
-      "projectPath": "/Users/chandra.pandey/dotnet/MongoWebAPI/MongoWebAPI.csproj",
+      "projectPath": "/Users/chandra.pandey/dotnet/mongo/MongoWebAPI/MongoWebAPI.csproj",
       "packagesPath": "/Users/chandra.pandey/.nuget/packages/",
-      "outputPath": "/Users/chandra.pandey/dotnet/MongoWebAPI/obj/",
+      "outputPath": "/Users/chandra.pandey/dotnet/mongo/MongoWebAPI/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

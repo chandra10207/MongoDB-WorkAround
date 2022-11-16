@@ -6,6 +6,9 @@ MongoClient client = new MongoClient("mongodb://chandra:d56_G_paEEjEv_6@ac-9jm9q
 
 IMongoCollection<BsonDocument> playlistCollection = client.GetDatabase("sample_mflix").GetCollection<BsonDocument>("playlist");
 
+
+
+
 List<BsonDocument> results = playlistCollection.Find(new BsonDocument()).ToList();
 
 foreach(BsonDocument result in results)
