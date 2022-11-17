@@ -6,7 +6,17 @@ using System.Linq;
 
 namespace MongoCRUDCSharpConsole
 {
-    
+    /*
+     * Aggregation Pipeline:
+     * Match
+     * Group
+     * Sort
+     * Project
+     * 
+     * Unwind 
+     * Bucket
+     * 
+     */
 	public class AggregationPipeline
     {
         private IMongoClient _mongoClient;
