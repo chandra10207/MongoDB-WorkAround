@@ -26,10 +26,10 @@ namespace MongoCRUDCSharpConsole
 
             AggregationPipeline ap = new AggregationPipeline(client);
             //ap.Match();
-            //ap.Group();
+            ap.Group();
             //ap.SortLINQ();
             //ap.SortBson();
-            ap.Projection();
+            //ap.Projection();
 
 
 

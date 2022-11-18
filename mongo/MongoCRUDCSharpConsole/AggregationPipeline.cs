@@ -27,6 +27,7 @@ namespace MongoCRUDCSharpConsole
         private readonly IMongoCollection<BsonDocument> _accountCollectionBson;
         private readonly IMongoCollection<Restaurant> _restaurantsCollection;
         private readonly IMongoCollection<Transfer> _transferCollection;
+        private readonly IMongoCollection<Customer> _customersCollection;
 
         public AggregationPipeline(IMongoClient client)
         {
@@ -37,6 +38,7 @@ namespace MongoCRUDCSharpConsole
             _accountCollection = _sampleAnalyticsDatabase.GetCollection<Account>("accounts");
             _accountCollectionBson = _sampleAnalyticsDatabase.GetCollection<BsonDocument>("accounts");
             _transferCollection = _sampleAnalyticsDatabase.GetCollection<Transfer>("transfers");
+            _customersCollection = _sampleAnalyticsDatabase.GetCollection<Customer>("customers");
 
             _sampleRestaurantsDatabase = _mongoClient.GetDatabase("sample_restaurants");
             _restaurantsCollection = _sampleRestaurantsDatabase.GetCollection<Restaurant>("restaurants");
@@ -180,6 +182,23 @@ namespace MongoCRUDCSharpConsole
 
 
         }
+
+
+        public void getDuplicateCustomers()
+        {
+
+
+
+          
+
+
+
+        }
+
+
+
+
+
 
 
 

@@ -28,6 +28,11 @@ namespace MongoCRUDCSharpConsole
 
         }
 
+        public void QueryDuplicateCustomers()
+        {
+
+        }
+
         public void Querying()
         {
              //var account = _accountCollection
